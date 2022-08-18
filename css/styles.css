@@ -1,4 +1,3 @@
-@charset "UTF-8";
 * {
   margin: 0px;
   /* MARGEN EXTERNO */
@@ -17,30 +16,6 @@ nav {
   font-family: 'Fredoka One', cursive;
   color: #083b66;
   font-size: 16px; }
-
-.header__nav {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  padding: 0 16px;
-  width: 100vw; }
-
-.header__logo {
-  justify-content: flex-start;
-  width: 60px;
-  height: 60px; }
-
-.header__lista {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-  list-style: none;
-  /* la propiedad hace que haya un punto otro elemento o nada frente a la viñeta */
-  padding: 0 16px; }
-
-.header__item {
-  color: #083b66;
-  text-decoration: none; }
 
 main {
   display: flex;
@@ -77,6 +52,12 @@ p {
     font-size: 25px;
     padding: 0px 16px;
     text-align: center; }
+  .principal__contenido {
+    display: flex;
+    justify-content: center;
+    padding-top: 70px; }
+    .principal__contenido > div {
+      width: 45%; }
   .principal__subtitulo {
     font-family: 'Fredoka One', cursive;
     color: #083b66;
@@ -86,22 +67,10 @@ p {
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     padding: 0px 16px; }
-  .principal__span {
-    font-family: 'Roboto', sans-serif;
-    font-size: 16px;
-    padding: 0px 16px; }
   .principal__img {
     width: 300px;
     height: 300px;
     padding: 0px 16px; }
-
-.principal__contenido {
-  display: flex;
-  justify-content: center;
-  padding-top: 70px; }
-
-.principal__contenido > div {
-  width: 45%; }
 
 .principal__titulo--galeria {
   font-family: 'Fredoka One', cursive;
@@ -126,12 +95,11 @@ p {
   margin: auto;
   margin-top: 20px;
   padding: 10px; }
-
-.galeria__img {
-  width: 300px;
-  height: 300px;
-  margin: 10px 0px 10px 0px;
-  padding: 10px 0px; }
+  .galeria__index .galeria__img {
+    width: 300px;
+    height: 300px;
+    margin: 10px 0px 10px 0px;
+    padding: 10px 0px; }
 
 .galeria__grid {
   display: grid;
@@ -210,9 +178,13 @@ p {
   background-repeat: no-repeat; }
 
 .carousel__size {
-  width: 50%;
-  height: 50%;
+  width: 350px;
+  height: 350px;
   margin-left: 315px; }
+  .carousel__size .carousel__text {
+    background-color: rgba(0, 0, 0, 0.39);
+    font-weight: bolder;
+    text-shadow: black 100px; }
 
 .lugares__img {
   width: 300px;
@@ -223,34 +195,9 @@ p {
 .contacto__main {
   justify-content: center; }
 
-.form__nombre {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 10px 16px; }
-
-.form__email {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 10px 16px; }
-
-.form__textarea {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 10px 16px; }
-
 .texterea__size {
   width: 250px;
   height: 300px; }
-
-.form__envio {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 10px 16px;
-  /* 0px 16px minimo permitido para separar de los bordes */ }
 
 .ubicacion {
   padding: 0 16px; }
