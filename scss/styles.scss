@@ -140,78 +140,80 @@ p{
     column-gap: 10px;
     row-gap: 10px;
     background-color: white;
+
+    .alta_montana {
+        grid-area: alta_montana;
+        background-image: url('../resources/alta_montana.jpg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    
+    .cacheuta {
+        grid-area: cacheuta;
+        background-image: url('../resources/cacheuta.jpg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    
+    .bodega {
+        grid-area: bodega;
+        background-image: url('../resources/bodega.jpg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    
+    .cristo_redentor {
+        grid-area: cristo_redentor;
+        background-image: url('../resources/cristo_redentor.jpg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    
+    .carpa_aconcagua {
+        grid-area: carpa_aconcagua;
+        background-image: url('../resources/carpa_aconcagua.jpg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .parque_otono {
+        grid-area: parque_otono;
+        background-image: url('../resources/parque_otono.jpg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    
+    .puente_del_inca {
+        grid-area: puente_del_inca;
+        background-image: url('../resources/puente_del_inca.jpg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    
+    .valle_grande {
+        grid-area: valle_grande;
+        background-image: url('../resources/valle_grande.jpg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    
+    .vinedos_montana {
+        grid-area: vinedos_montana;
+        background-image: url('../resources/vinedos_montana.jpg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
 }
 
-.alta_montana {
-    grid-area: alta_montana;
-    background-image: url('../resources/alta_montana.jpg');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
 
-.cacheuta {
-    grid-area: cacheuta;
-    background-image: url('../resources/cacheuta.jpg');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-.bodega {
-    grid-area: bodega;
-    background-image: url('../resources/bodega.jpg');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-.cristo_redentor {
-    grid-area: cristo_redentor;
-    background-image: url('../resources/cristo_redentor.jpg');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-.carpa_aconcagua {
-    grid-area: carpa_aconcagua;
-    background-image: url('../resources/carpa_aconcagua.jpg');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-.parque_otono {
-    grid-area: parque_otono;
-    background-image: url('../resources/parque_otono.jpg');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-.puente_del_inca {
-    grid-area: puente_del_inca;
-    background-image: url('../resources/puente_del_inca.jpg');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-.valle_grande {
-    grid-area: valle_grande;
-    background-image: url('../resources/valle_grande.jpg');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-.vinedos_montana {
-    grid-area: vinedos_montana;
-    background-image: url('../resources/vinedos_montana.jpg');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
 
 .carousel__size{
     width: 350px;
@@ -306,12 +308,32 @@ footer {
 99.9% SIEMPRE DEBE HABER UNA SOLA COLUMNA
 0.1% son galerias cuadriculadas que pueden tener hasta 3 columnas*/
 @media (min-width: 320px) and (max-width: 575px) {
-    
+    .principal__contenido{
+        flex-direction: column;
+        align-items: center;
+
+    }
+    .principal__img{
+        padding-bottom: 30px;
+    }
+    .principal__contenido>div {
+        width: 90%;
+    }
 }
 
 /* media querie tablet */
 @media (min-width: 576px) and (max-width: 992px) {
-    
+    .principal__contenido{
+        flex-direction: column;
+        align-items: center;
+
+    }
+    .principal__img{
+        padding-bottom: 30px;
+    }
+    .principal__contenido>div {
+        width: 90%;
+    }
 }
 
 /* VIEWPORT WIDTH HEIGTH
@@ -341,14 +363,5 @@ main{
 }
 
 @media  (max-width:768px) {
-    .principal__contenido{
-        flex-direction: column;
-        align-items: center;
-
-    }
-    .principal__img{
-        padding-bottom: 30px;
-    }
-    .principal__contenido>div {
-        width: 90%;
-    }}
+    
+}
