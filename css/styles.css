@@ -210,18 +210,33 @@ p {
 .contacto {
   display: flex; }
 
-.footer__fondo {
+footer {
+  display: grid;
+  grid-template-areas: "indice logo redes" "indice derechos redes";
   background-color: #ed6509;
-  margin-top: 40px;
-  padding: 20px 0px; }
-
-.footer__fondo iframe {
-  margin: auto; }
-
-.footer__derechos {
-  display: block;
-  text-align: center;
-  padding: 0 16px; }
+  padding: 24px; }
+  footer .footer__indice {
+    grid-area: indice; }
+    footer .footer__indice ul li {
+      font-size: 16px;
+      padding-bottom: 12px; }
+  footer .footer__redes {
+    grid-area: redes;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  footer .footer__logo {
+    grid-area: logo;
+    display: flex;
+    justify-content: center; }
+  footer .footer__derechos {
+    grid-area: derechos;
+    display: flex;
+    justify-content: center; }
+  footer .footer__iconos {
+    width: 70px;
+    height: 70px;
+    margin: 12px; }
 
 /* media querie celular 
 99.9% SIEMPRE DEBE HABER UNA SOLA COLUMNA
