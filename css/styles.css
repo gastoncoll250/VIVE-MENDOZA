@@ -23,7 +23,8 @@ main {
   flex-wrap: wrap;
   width: auto;
   /* VIEW WIDTH */
-  padding: 10px; }
+  padding: 10px;
+  margin-top: 30px; }
 
 h1 {
   font-family: 'Fredoka One', cursive;
@@ -71,6 +72,28 @@ p {
     width: 300px;
     height: 300px;
     padding: 0px 16px; }
+
+.nosotros__article {
+  display: flex;
+  margin-bottom: 25px; }
+  .nosotros__article .nosotros__img {
+    width: 250px;
+    height: 250px;
+    border: solid #ed6509 2px; }
+
+.nosotros__article2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .nosotros__article2 .nosotros__img--destacada {
+    display: flex;
+    align-items: center;
+    width: 300px;
+    height: 300px; }
+
+.principal__span {
+  font-family: 'Fredoka One', cursive;
+  color: #083b66; }
 
 .principal__titulo--galeria {
   font-family: 'Fredoka One', cursive;
@@ -169,9 +192,9 @@ p {
     background-repeat: no-repeat; }
 
 .carousel__size {
-  width: 350px;
-  height: 350px;
-  margin-left: 315px; }
+  width: 50%;
+  height: 50%;
+  margin: auto; }
   .carousel__size .carousel__text {
     background-color: rgba(0, 0, 0, 0.39);
     font-weight: bolder;
@@ -210,7 +233,11 @@ footer {
     grid-area: indice; }
     footer .footer__indice ul li {
       font-size: 16px;
-      padding-bottom: 12px; }
+      padding-bottom: 12px;
+      list-style: none; }
+      footer .footer__indice ul li a {
+        text-decoration: none;
+        color: black; }
   footer .footer__redes {
     grid-area: redes;
     display: flex;
@@ -239,7 +266,18 @@ footer {
   .principal__img {
     padding-bottom: 30px; }
   .principal__contenido > div {
-    width: 90%; } }
+    width: 90%; }
+  footer {
+    grid-template-areas: "logo logo" "logo logo" "indice indice" "redes redes" "derechos derechos"; }
+    footer .footer__indice {
+      grid-area: indice;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+  .nosotros__article {
+    flex-direction: column;
+    align-items: center; } }
 
 /* media querie tablet */
 @media (min-width: 576px) and (max-width: 992px) {
@@ -249,7 +287,10 @@ footer {
   .principal__img {
     padding-bottom: 30px; }
   .principal__contenido > div {
-    width: 90%; } }
+    width: 90%; }
+  .nosotros__article {
+    flex-direction: column;
+    align-items: center; } }
 
 /* VIEWPORT WIDTH HEIGTH
 VIEWPORT WIDTH -> 100VW
@@ -257,12 +298,4 @@ VIEWPORT HEIGTH -> 100VH */
 /*ESTILOS APLICADOS POR TUTORA EMILCE*/
 .nosotros {
   width: 85%;
-  margin: auto; }
-
-main {
-  margin-top: 30px; }
-
-.carousel__size {
-  width: 50%;
-  height: 50%;
   margin: auto; }

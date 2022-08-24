@@ -22,6 +22,7 @@ main{
     flex-wrap: wrap;
     width: auto;/* VIEW WIDTH */
     padding: 10px;
+    margin-top: 30px;
 }
 
 h1{
@@ -87,6 +88,37 @@ p{
         padding: 0px 16px;
     }
 
+}
+
+.nosotros__article{
+    display: flex;
+    margin-bottom: 25px;
+    
+    .nosotros__img{
+        width: 250px;
+        height: 250px;
+        border: solid #ed6509 2px;
+    }
+}
+
+.nosotros__article2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    .nosotros__img--destacada{
+        display: flex;
+        align-items: center;
+        width: 300px;
+        height: 300px;
+    }
+}
+
+
+
+.principal__span{
+    font-family: 'Fredoka One', cursive;   
+    color:#083b66;
 }
 
 .principal__titulo--galeria{
@@ -216,9 +248,9 @@ p{
 
 
 .carousel__size{
-    width: 350px;
-    height: 350px;
-    margin-left: 315px;
+    width: 50%;
+    height: 50%;
+    margin: auto;
 
     .carousel__text{
         background-color: rgba(0, 0, 0, 0.39);
@@ -270,6 +302,11 @@ footer {
             & ul li{
                 font-size: 16px;
                 padding-bottom: 12px;
+                list-style: none;
+                    a{
+                        text-decoration: none;
+                        color: black;
+                    }
             }
         }
         
@@ -319,6 +356,27 @@ footer {
     .principal__contenido>div {
         width: 90%;
     }
+
+    footer {
+        grid-template-areas: "logo logo"
+                            "logo logo"
+                            "indice indice"
+                            "redes redes"
+                            "derechos derechos";
+        .footer {
+            &__indice{
+                grid-area: indice;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    }
+    .nosotros__article{
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 /* media querie tablet */
@@ -333,6 +391,11 @@ footer {
     }
     .principal__contenido>div {
         width: 90%;
+    }
+
+    .nosotros__article{
+        flex-direction: column;
+        align-items: center;
     }
 }
 
@@ -351,17 +414,5 @@ VIEWPORT HEIGTH -> 100VH */
     margin: auto;
 }
 
-main{
-    margin-top: 30px;
-    
-}
 
-.carousel__size {
-    width: 50%;
-    height: 50%;
-    margin: auto;
-}
 
-@media  (max-width:768px) {
-    
-}
