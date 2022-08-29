@@ -242,10 +242,15 @@ p {
   margin: 10px 0px 10px 0px;
   padding: 10px 0px; }
 
-.contacto__main {
+.contacto {
+  flex-direction: column;
+  align-items: center;
   justify-content: center; }
 
-.texterea__size {
+.textarea {
+  display: flex; }
+
+.textarea__size {
   width: 250px;
   height: 300px; }
 
@@ -256,9 +261,6 @@ p {
   padding: 0 16px;
   width: 400px;
   height: 450px; }
-
-.contacto {
-  display: flex; }
 
 /* media querie celular 
 99.9% SIEMPRE DEBE HABER UNA SOLA COLUMNA
