@@ -247,19 +247,21 @@ p {
   align-items: center;
   justify-content: center; }
 
-.textarea {
-  display: flex; }
+.textarea__email {
+  align-items: center;
+  width: 300px; }
 
 .textarea__size {
-  width: 250px;
+  align-items: center;
+  width: 300px;
   height: 300px; }
 
 .ubicacion {
-  padding: 0 16px; }
+  padding: 16px 16px; }
 
 .ubicacion__mapa {
   padding: 0 16px;
-  width: 400px;
+  width: 300px;
   height: 450px; }
 
 /* media querie celular 
