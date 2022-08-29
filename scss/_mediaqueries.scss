@@ -1,0 +1,71 @@
+/* media querie celular 
+99.9% SIEMPRE DEBE HABER UNA SOLA COLUMNA
+0.1% son galerias cuadriculadas que pueden tener hasta 3 columnas*/
+@media (min-width: 320px) and (max-width: 575px) {
+    .principal__contenido{
+        flex-direction: column;
+        align-items: center;
+
+    }
+    .principal__img{
+        padding-bottom: 30px;
+    }
+    .principal__contenido>div {
+        width: 90%;
+    }
+
+    .galeria__grid{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas: "alta_montana"
+                            "cacheuta"
+                            "carpa_aconcagua"
+                            "cristo_redentor"
+                            "parque_otono"
+                            "vinedos_montana"
+                            "puente_del_inca"
+                            "valle_grande";
+
+    }
+
+    footer {
+        grid-template-areas: "logo logo"
+                            "logo logo"
+                            "indice indice"
+                            "redes redes"
+                            "derechos derechos";
+        .footer {
+            &__indice{
+                grid-area: indice;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    }
+    .nosotros__article{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* media querie tablet */
+@media (min-width: 576px) and (max-width: 992px) {
+    .principal__contenido{
+        flex-direction: column;
+        align-items: center;
+
+    }
+    .principal__img{
+        padding-bottom: 30px;
+    }
+    .principal__contenido>div {
+        width: 90%;
+    }
+
+    .nosotros__article{
+        flex-direction: column;
+        align-items: center;
+    }
+}

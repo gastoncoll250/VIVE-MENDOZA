@@ -1,3 +1,7 @@
+@import "header";
+@import "footer";
+
+
 *{
     margin: 0px; /* MARGEN EXTERNO */
     padding: 0px; /* MARGEN INTERNO */
@@ -5,16 +9,6 @@
 
 nav{
     padding: 0px 30px;
-}
-
-.header{
-    top: 0px;
-    display: flex;
-    flex-wrap: wrap;
-    background-color: #ed6509;
-    font-family: 'Fredoka One', cursive;    
-    color:#083b66;
-    font-size: 16px;
 }
 
 main{
@@ -31,6 +25,14 @@ h1{
     font-size: 25px;
     padding: 0px 16px;
     text-align: center;
+}
+
+h2{
+    font-family: 'Fredoka One', cursive;   
+    color:#083b66;
+    font-size: 20px;
+    padding: 0px 16px;
+    text-align: center
 }
 
 h3{
@@ -90,6 +92,11 @@ p{
 
 }
 
+.nosotros{
+    width: 85%;
+    margin: auto;
+}
+
 .nosotros__article{
     display: flex;
     margin-bottom: 25px;
@@ -121,21 +128,14 @@ p{
     color:#083b66;
 }
 
-.principal__titulo--galeria{
-    font-family: 'Fredoka One', cursive;   
-    color:#083b66;
-    font-size: 25px;
-    padding: 0px 16px;
-    margin-left: 580px;
+.galeria{
+    flex-direction: column;
+    align-items: center;
 }
 
-.lugares__titulo{
+.lugares{
     flex-direction: column;
-    font-family: 'Fredoka One', cursive;   
-    color:#083b66;
-    font-size: 25px;
-    padding: 0px 16px;
-    margin-left: 520px;
+    align-items: center;
 }
 
 .galeria__index{
@@ -248,8 +248,8 @@ p{
 
 
 .carousel__size{
-    width: 50%;
-    height: 50%;
+    width: 55%;
+    height: 55%;
     margin: auto;
 
     .carousel__text{
@@ -289,130 +289,10 @@ p{
     display: flex;
 }
 
-footer {
-    display: grid;
-    grid-template-areas: "indice logo redes"
-                        "indice derechos redes";
-    background-color: #ed6509;
-    padding: 24px;
-    .footer {
-        &__indice{
-            grid-area: indice;
-        
-            & ul li{
-                font-size: 16px;
-                padding-bottom: 12px;
-                list-style: none;
-                    a{
-                        text-decoration: none;
-                        color: black;
-                    }
-            }
-        }
-        
-        &__redes{
-            grid-area: redes;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        
-        &__logo {
-            grid-area: logo;
-            display: flex;
-            justify-content: center;
-        }
-        
-        &__derechos{
-            grid-area: derechos;
-            display: flex;
-            justify-content: center;
-        }
-        
-        &__iconos{
-            width: 70px;
-            height: 70px;
-            margin: 12px;
-        }
-    }
-}
 
 
 
 
-
-/* media querie celular 
-99.9% SIEMPRE DEBE HABER UNA SOLA COLUMNA
-0.1% son galerias cuadriculadas que pueden tener hasta 3 columnas*/
-@media (min-width: 320px) and (max-width: 575px) {
-    .principal__contenido{
-        flex-direction: column;
-        align-items: center;
-
-    }
-    .principal__img{
-        padding-bottom: 30px;
-    }
-    .principal__contenido>div {
-        width: 90%;
-    }
-
-    footer {
-        grid-template-areas: "logo logo"
-                            "logo logo"
-                            "indice indice"
-                            "redes redes"
-                            "derechos derechos";
-        .footer {
-            &__indice{
-                grid-area: indice;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-            }
-        }
-    }
-    .nosotros__article{
-        flex-direction: column;
-        align-items: center;
-    }
-}
-
-/* media querie tablet */
-@media (min-width: 576px) and (max-width: 992px) {
-    .principal__contenido{
-        flex-direction: column;
-        align-items: center;
-
-    }
-    .principal__img{
-        padding-bottom: 30px;
-    }
-    .principal__contenido>div {
-        width: 90%;
-    }
-
-    .nosotros__article{
-        flex-direction: column;
-        align-items: center;
-    }
-}
-
-/* VIEWPORT WIDTH HEIGTH
-VIEWPORT WIDTH -> 100VW
-VIEWPORT HEIGTH -> 100VH */
-
-
-
-/*ESTILOS APLICADOS POR TUTORA EMILCE*/
-
-
-
-.nosotros{
-    width: 85%;
-    margin: auto;
-}
-
+@import "mediaqueries"; /* siempre ultimas las mediaqueries */
 
 

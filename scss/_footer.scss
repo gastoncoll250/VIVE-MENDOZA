@@ -1,0 +1,47 @@
+footer {
+    display: grid;
+    grid-template-areas: "indice logo redes"
+                        "indice derechos redes";
+    background-color: #ed6509;
+    padding: 24px;
+    .footer {
+        &__indice{
+            grid-area: indice;
+        
+            & ul li{
+                font-size: 16px;
+                padding-bottom: 12px;
+                list-style: none;
+                    a{
+                        text-decoration: none;
+                        color: black;
+                    }
+            }
+        }
+        
+        &__redes{
+            grid-area: redes;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        &__logo {
+            grid-area: logo;
+            display: flex;
+            justify-content: center;
+        }
+        
+        &__derechos{
+            grid-area: derechos;
+            display: flex;
+            justify-content: center;
+        }
+        
+        &__iconos{
+            width: 70px;
+            height: 70px;
+            margin: 12px;
+        }
+    }
+}

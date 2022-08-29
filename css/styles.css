@@ -1,3 +1,44 @@
+.header {
+  top: 0px;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #ed6509;
+  font-family: 'Fredoka One', cursive;
+  color: #083b66;
+  font-size: 16px; }
+
+footer {
+  display: grid;
+  grid-template-areas: "indice logo redes" "indice derechos redes";
+  background-color: #ed6509;
+  padding: 24px; }
+  footer .footer__indice {
+    grid-area: indice; }
+    footer .footer__indice ul li {
+      font-size: 16px;
+      padding-bottom: 12px;
+      list-style: none; }
+      footer .footer__indice ul li a {
+        text-decoration: none;
+        color: black; }
+  footer .footer__redes {
+    grid-area: redes;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  footer .footer__logo {
+    grid-area: logo;
+    display: flex;
+    justify-content: center; }
+  footer .footer__derechos {
+    grid-area: derechos;
+    display: flex;
+    justify-content: center; }
+  footer .footer__iconos {
+    width: 70px;
+    height: 70px;
+    margin: 12px; }
+
 * {
   margin: 0px;
   /* MARGEN EXTERNO */
@@ -7,15 +48,6 @@
 /* RESETEO CSS */
 nav {
   padding: 0px 30px; }
-
-.header {
-  top: 0px;
-  display: flex;
-  flex-wrap: wrap;
-  background-color: #ed6509;
-  font-family: 'Fredoka One', cursive;
-  color: #083b66;
-  font-size: 16px; }
 
 main {
   display: flex;
@@ -30,6 +62,13 @@ h1 {
   font-family: 'Fredoka One', cursive;
   color: #083b66;
   font-size: 25px;
+  padding: 0px 16px;
+  text-align: center; }
+
+h2 {
+  font-family: 'Fredoka One', cursive;
+  color: #083b66;
+  font-size: 20px;
   padding: 0px 16px;
   text-align: center; }
 
@@ -73,6 +112,10 @@ p {
     height: 300px;
     padding: 0px 16px; }
 
+.nosotros {
+  width: 85%;
+  margin: auto; }
+
 .nosotros__article {
   display: flex;
   margin-bottom: 25px; }
@@ -95,20 +138,13 @@ p {
   font-family: 'Fredoka One', cursive;
   color: #083b66; }
 
-.principal__titulo--galeria {
-  font-family: 'Fredoka One', cursive;
-  color: #083b66;
-  font-size: 25px;
-  padding: 0px 16px;
-  margin-left: 580px; }
-
-.lugares__titulo {
+.galeria {
   flex-direction: column;
-  font-family: 'Fredoka One', cursive;
-  color: #083b66;
-  font-size: 25px;
-  padding: 0px 16px;
-  margin-left: 520px; }
+  align-items: center; }
+
+.lugares {
+  flex-direction: column;
+  align-items: center; }
 
 .galeria__index {
   display: flex;
@@ -192,8 +228,8 @@ p {
     background-repeat: no-repeat; }
 
 .carousel__size {
-  width: 50%;
-  height: 50%;
+  width: 55%;
+  height: 55%;
   margin: auto; }
   .carousel__size .carousel__text {
     background-color: rgba(0, 0, 0, 0.39);
@@ -224,38 +260,6 @@ p {
 .contacto {
   display: flex; }
 
-footer {
-  display: grid;
-  grid-template-areas: "indice logo redes" "indice derechos redes";
-  background-color: #ed6509;
-  padding: 24px; }
-  footer .footer__indice {
-    grid-area: indice; }
-    footer .footer__indice ul li {
-      font-size: 16px;
-      padding-bottom: 12px;
-      list-style: none; }
-      footer .footer__indice ul li a {
-        text-decoration: none;
-        color: black; }
-  footer .footer__redes {
-    grid-area: redes;
-    display: flex;
-    justify-content: center;
-    align-items: center; }
-  footer .footer__logo {
-    grid-area: logo;
-    display: flex;
-    justify-content: center; }
-  footer .footer__derechos {
-    grid-area: derechos;
-    display: flex;
-    justify-content: center; }
-  footer .footer__iconos {
-    width: 70px;
-    height: 70px;
-    margin: 12px; }
-
 /* media querie celular 
 99.9% SIEMPRE DEBE HABER UNA SOLA COLUMNA
 0.1% son galerias cuadriculadas que pueden tener hasta 3 columnas*/
@@ -267,6 +271,10 @@ footer {
     padding-bottom: 30px; }
   .principal__contenido > div {
     width: 90%; }
+  .galeria__grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: "alta_montana" "cacheuta" "carpa_aconcagua" "cristo_redentor" "parque_otono" "vinedos_montana" "puente_del_inca" "valle_grande"; }
   footer {
     grid-template-areas: "logo logo" "logo logo" "indice indice" "redes redes" "derechos derechos"; }
     footer .footer__indice {
@@ -292,10 +300,4 @@ footer {
     flex-direction: column;
     align-items: center; } }
 
-/* VIEWPORT WIDTH HEIGTH
-VIEWPORT WIDTH -> 100VW
-VIEWPORT HEIGTH -> 100VH */
-/*ESTILOS APLICADOS POR TUTORA EMILCE*/
-.nosotros {
-  width: 85%;
-  margin: auto; }
+/* siempre ultimas las mediaqueries */
